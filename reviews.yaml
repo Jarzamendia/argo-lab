@@ -26,20 +26,19 @@ metadata:
   labels:
     app: reviews
     version: v1
-    istio-injection: enabled
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: reviews
       version: v1
-      istio-injection: enabled
   template:
     metadata:
       labels:
         app: reviews
         version: v1
-        istio-injection: enabled
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -71,7 +70,6 @@ metadata:
   labels:
     app: reviews
     version: v2
-    istio-injection: enabled
 spec:
   replicas: 1
   selector:
@@ -83,6 +81,8 @@ spec:
       labels:
         app: reviews
         version: v2
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -114,7 +114,6 @@ metadata:
   labels:
     app: reviews
     version: v3
-    istio-injection: enabled
 spec:
   replicas: 1
   selector:
@@ -126,6 +125,8 @@ spec:
       labels:
         app: reviews
         version: v3
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       serviceAccountName: bookinfo-reviews
       containers:

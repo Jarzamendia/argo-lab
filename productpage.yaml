@@ -26,20 +26,19 @@ metadata:
   labels:
     app: productpage
     version: v1
-    istio-injection: enabled
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: productpage
       version: v1
-      istio-injection: enabled
   template:
     metadata:
       labels:
         app: productpage
         version: v1
-        istio-injection: enabled
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       serviceAccountName: bookinfo-productpage
       containers:
