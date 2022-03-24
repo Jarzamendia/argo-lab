@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: bookinfo
+resources:
+- details.yaml
+- productpage.yaml
+- ratings.yaml
+- reviews.yaml
+images:
+- name: docker.io/istio/examples-bookinfo-reviews-v1
+  newTag: 1.16.2
+- name: docker.io/istio/examples-bookinfo-ratings-v1
+  newTag: 1.16.2
+- name: docker.io/istio/examples-bookinfo-productpage-v1
+  newTag: 1.16.2
+- name: docker.io/istio/examples-bookinfo-details-v1
+  newTag: 1.16.2
