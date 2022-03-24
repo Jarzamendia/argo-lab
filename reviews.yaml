@@ -38,7 +38,6 @@ spec:
       labels:
         app: reviews
         version: v1
-        istio-injection: enabled
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -82,7 +81,6 @@ spec:
       labels:
         app: reviews
         version: v2
-        istio-injection: enabled
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
@@ -126,7 +124,6 @@ spec:
       labels:
         app: reviews
         version: v3
-        istio-injection: enabled
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
