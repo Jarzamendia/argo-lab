@@ -26,12 +26,14 @@ metadata:
   labels:
     app: productpage
     version: v1
+    istio-injection: enabled
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: productpage
       version: v1
+      istio-injection: enabled
   template:
     metadata:
       labels:
