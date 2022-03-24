@@ -35,6 +35,7 @@ spec:
     matchLabels:
       app: ratings
       version: v1
+      istio-injection: enabled
   template:
     metadata:
       labels:

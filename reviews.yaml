@@ -33,11 +33,13 @@ spec:
     matchLabels:
       app: reviews
       version: v1
+      istio-injection: enabled
   template:
     metadata:
       labels:
         app: reviews
         version: v1
+        istio-injection: enabled
     spec:
       serviceAccountName: bookinfo-reviews
       containers:

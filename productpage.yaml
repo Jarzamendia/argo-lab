@@ -39,6 +39,7 @@ spec:
       labels:
         app: productpage
         version: v1
+        istio-injection: enabled
     spec:
       serviceAccountName: bookinfo-productpage
       containers:
